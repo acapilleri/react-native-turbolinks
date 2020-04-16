@@ -1,14 +1,14 @@
 {
-  "name": "react-native-turbolinks",
-  "version": "3.0",
+  "name": "react-native-turbolinks-plus",
+  "version": "2.2.6",
   "description": "Turbolinks for React Native.",
-  "author": "Lázaro Nixon <lazaronixon@hotmail.com>",
+  "author": "Capilleri <capilleri@@gmail.com>",
   "homepage": "https://github.com/acapilleri/react-native-turbolinks",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/acapilleri/react-native-turbolinks.git"
+    "url": "https://github.com/a/react-native-turbolinks.git"
   },
   "keywords": [
     "react-native",

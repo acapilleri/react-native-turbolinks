@@ -17,7 +17,9 @@ class TurbolinksRoute {
     var hidesShadow: Bool = false
     var hidesNavBar: Bool = false
     var visibleDropDown: Bool = false
-    
+    var animated: Bool = true
+    var trasparent: CGFloat = 0.0
+
     init(_ route: Dictionary<AnyHashable, Any>) {
         self.title = RCTConvert.nsString(route["title"])
         self.subtitle = RCTConvert.nsString(route["subtitle"])
@@ -35,5 +37,8 @@ class TurbolinksRoute {
         self.hidesShadow = RCTConvert.bool(route["hidesShadow"])
         self.hidesNavBar = RCTConvert.bool(route["hidesNavBar"])
         self.visibleDropDown = RCTConvert.bool(route["visibleDropDown"])
+        self.animated = RCTConvert.bool(route["animated"])
+        self.trasparent = RCTConvert.cgFloat(route["trasparent"])
+
     }
 }

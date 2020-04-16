@@ -125,7 +125,14 @@ class RNTurbolinksManager: RCTEventEmitter {
     fileprivate func presentNativeView(_ route: TurbolinksRoute) {
         let viewController = NativeViewController(self, route)
         if route.modal {
-            navigationController.present(viewController, animated: true)
+            if route.trasparent != 0.0 {
+            viewController.providesPresentationContextTransitionStyle = true
+            viewController.definesPresentationContext = true
+            viewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext;
+            viewController.view.backgroundColor = UIColor.init(white: 0.4, alpha: route.trasparent )
+            }
+            navigationController.present(viewController, animated: route.animated)
+            
         } else if route.action == .Advance {
             navigationController.pushViewController(viewController, animated: true)
         } else if route.action == .Replace {
